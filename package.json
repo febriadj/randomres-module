@@ -1,0 +1,24 @@
+{
+  "name": "randomres-module",
+  "version": "1.0.0",
+  "description": "get random value with randomres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/febriadj/randomres-module.git"
+  },
+  "keywords": [
+    "random",
+    "random-value",
+    "randomres"
+  ],
+  "author": "febriadji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/febriadj/randomres-module/issues"
+  },
+  "homepage": "https://github.com/febriadj/randomres-module#readme"
+}
