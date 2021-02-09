@@ -1,6 +1,6 @@
 # RandomRes
-![nodejs](https://img.shields.io/badge/runtime-nodejs-588157?style=flat-square&logo=node.js)
-![build](https://img.shields.io/badge/package-randomres-d62828?style=flat-square&logo=npm&logoColor=white)
+![nodejs](https://img.shields.io/badge/nodejs-00a896?style=for-the-badge&logo=node.js&logoColor=white)
+![build](https://img.shields.io/badge/randomres-d62828?style=for-the-badge&logo=npm&logoColor=white)
 <br>
 
 RandomRes is a simple module to make it easy for you to get random values, you can install this module via npm
