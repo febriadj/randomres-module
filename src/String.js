@@ -5,11 +5,41 @@ exports.String = function({ length, charset }) {
   this.charset = charset
 
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-  const numeric = '0123456789'
+  const numeric = '01234567890123456789'
 
-  const concat = numeric.concat( alphabet )
-  let result = []
-  
-  for ( let i = 0; i < 10; i++ ) result[i] = concat[Math.floor( Math.random() * concat.length )]
-  return result.join('')
+  if ( this.charset == undefined ) {
+
+    if ( this.length == undefined ) {
+      const concat = numeric.concat( alphabet )
+      let result = []
+      
+      for ( let i = 0; i < 10; i++ ) result[i] = concat[Math.floor( Math.random() * concat.length )]
+      return result.join('')
+    
+    } else {
+      const concat = numeric.concat( alphabet )
+      let result = []
+      
+      for ( let i = 0; i < this.length; i++ ) result[i] = concat[Math.floor( Math.random() * concat.length )]
+      return result.join('')
+    }
+
+  } else if ( this.charset == 'alphabet' ) {
+
+    if ( this.length == undefined ) {
+      let result = []
+      
+      for ( let i = 0; i < 10; i++ ) result[i] = alphabet[Math.floor( Math.random() * alphabet.length )]
+      return result.join('')
+    
+    } else {
+      let result = []
+      
+      for ( let i = 0; i < this.length; i++ ) result[i] = alphabet[Math.floor( Math.random() * alphabet.length )]
+      return result.join('')
+    }
+
+  } else {
+    return new Error('this command cannot be executed')
+  }
 }
