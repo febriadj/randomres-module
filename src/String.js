@@ -39,6 +39,24 @@ exports.String = function({ length, charset }) {
       return result.join('')
     }
 
+  } else if ( this.charset != undefined && this.charset.length > 0 && typeof this.charset == 'string' ) {
+    
+    if ( this.length == undefined ) {
+      let result = []
+      
+      for ( let i = 0; i < this.charset.length; i++ ) result[i] = this.charset[Math.floor( Math.random() * this.charset.length )]
+      return result.join('')
+    
+    } else {
+      let result = []
+      
+      for ( let i = 0; i < this.length; i++ ) result[i] = this.charset[Math.floor( Math.random() * this.charset.length )]
+      return result.join('')
+    }
+
+  } else if ( typeof this.charset != 'string' ) {
+    return new Error('the charset value must be a string')
+
   } else {
     return new Error('this command cannot be executed')
   }

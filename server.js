@@ -1,5 +1,4 @@
 const randomres = require('./index')
-console.log(randomres.String({
-  charset: 'alphabet',
-  length: 30
+console.log(randomres.Integer({
+  length: 5
 }))
