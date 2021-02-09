@@ -1,4 +1,8 @@
 # RandomRes
+![nodejs](https://img.shields.io/badge/runtime-nodejs-588157?style=flat-square&logo=node.js)
+![build](https://img.shields.io/badge/package-randomres-d62828?style=flat-square&logo=npm&logoColor=white)
+<br>
+
 RandomRes is a simple module to make it easy for you to get random values, you can install this module via npm
 
 # Install
@@ -7,8 +11,10 @@ RandomRes is a simple module to make it easy for you to get random values, you c
 # How to Use
 ``` javascript
 // STRING VALUE
-
 const randomres = require('randomres')
+
+// default value
+randomres.String({}) //-> pt6K5g4x0G
 
 randomres.String({
   length: 15,
@@ -20,22 +26,20 @@ randomres.String({
   charset: value
 })
 
-// default value
-randomres.String({}) //-> pt6K5g4x0G
 ```
 
 ``` javascript
 // INTEGER VALUE
-
 const randomres = require('randomres')
+
+// default value
+randomres.Integer({}) //-> 3584312377
 
 randomres.Integer({
   length: 12,
   remove: 4
 })
 
-// default value
-randomres.Integer({}) //-> 3584312377
 ```
 
 # Procedure
