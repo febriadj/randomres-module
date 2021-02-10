@@ -6,9 +6,13 @@
 RandomRes is a simple module to make it easy for you to get values from several data types randomly
 
 # Install
-``` npm install -g randomres ```<br>
+```
+npm install -g randomres 
+```
 
-``` npm install --save randomres ```
+``` 
+npm install --save randomres 
+```
 
 # How to Use
 ``` javascript
