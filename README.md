@@ -34,14 +34,14 @@ randomres.str({
 // scrambles own value
 const randomres = require('randomres')
 
-const arr = ['banana', 'apple', 'avocado']
+const fruits = ['banana', 'apple', 'avocado']
 randomres.compile({
-  set: arr
+  set: fruits
 })
 
-const string = 'lorem ipsum set dolor amet'
+const description = 'Get random value with RandomRes'
 randomres.compile({
-  set: string,
+  set: description,
   length: 100 
 })
 

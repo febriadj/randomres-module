@@ -1,4 +1,5 @@
 exports.compile = function( options ) {
+
   if ( typeof options == 'object' ) {
     // key and value declarations
     const { set, length } = options
@@ -35,4 +36,5 @@ exports.compile = function( options ) {
   
   // have to initialize the object
   return new Error('Please initialize the set key and its value')
+  
 }

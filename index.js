@@ -1,15 +1,17 @@
 /*
 
-  - All length default values ​​are 10
+  - randomres is a simple module to make it easy for you 
+    to get values from several data types randomly.
 
-  - For the string data type, you can customize the result.
-  - Charset values ​​are currently alphabet only
-  
-  - The maximum length of the integer value is 16
-  - If the integer length is greater than 16, by default the length will be changed to 10
+  - all source code comes from the './src' directory.
+  - developer -> febriadj
+
+  - this module is released under the MIT license
 
 */
+
 const str = require('./src/String').str
+const date = require('./src/Date').date
 const compile = require('./src/Compile').compile
 
-module.exports = { str, compile }
+module.exports = { str, date, compile }

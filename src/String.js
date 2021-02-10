@@ -8,6 +8,10 @@ exports.str = function( options ) {
   const alphabet = upper.concat(lower),
         origin   = alphabet.concat(number)
 
+  if ( typeof options == 'string' || typeof options == 'number' ) {
+    return new Error(`Cannot execute values ​​of the '${ typeof options }' data type`)
+  }
+
   if ( typeof options == 'object' ) {
     
     // key and value declarations
