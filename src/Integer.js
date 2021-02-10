@@ -1,6 +1,6 @@
 'use strict'
 
-exports.Integer = function({ length, remove }) {
+exports.int = function({ length, remove }) {
   this.length = length
   this.remove = remove
 

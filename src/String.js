@@ -1,63 +1,44 @@
-'use strict'
+exports.str = function( options ) {
 
-exports.String = function({ length, charset }) {
-  this.length = length
-  this.charset = charset
+  const number = '0123456789',
+        upper  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        lower  = upper.toLowerCase()
+  
+  // combine
+  const alphabet = upper.concat(lower),
+        origin   = alphabet.concat(number)
 
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-  const numeric = '01234567890123456789'
+  if ( typeof options == 'object' ) {
+    // key and value declarations
+    const { collect, length } = options
 
-  if ( this.charset == undefined ) {
+    if ( collect == undefined ) {
+      // if you have declared an object, you must enter at least one value
+      if ( length == undefined ) return new Error('Please fill this object with at least one value')
 
-    if ( this.length == undefined ) {
-      const concat = numeric.concat( alphabet )
       let result = []
-      
-      for ( let i = 0; i < 10; i++ ) result[i] = concat[Math.floor( Math.random() * concat.length )]
-      return result.join('')
-    
-    } else {
-      const concat = numeric.concat( alphabet )
-      let result = []
-      
-      for ( let i = 0; i < this.length; i++ ) result[i] = concat[Math.floor( Math.random() * concat.length )]
+      for ( let i = 0; i < length; i++ ) result[i] = origin[Math.floor(Math.random() * origin.length)]
       return result.join('')
     }
 
-  } else if ( this.charset == 'alphabet' ) {
+    // only results in uppercase
+    if ( collect == 'uppercase' ) {
+      if ( length == undefined ) {
+        let result = []
+        for ( let i = 0; i < 10; i++ ) result[i] = upper[Math.floor(Math.random() * upper.length)]
+        return result.join('')
+      }
 
-    if ( this.length == undefined ) {
       let result = []
-      
-      for ( let i = 0; i < 10; i++ ) result[i] = alphabet[Math.floor( Math.random() * alphabet.length )]
-      return result.join('')
-    
-    } else {
-      let result = []
-      
-      for ( let i = 0; i < this.length; i++ ) result[i] = alphabet[Math.floor( Math.random() * alphabet.length )]
+      for ( let i = 0; i < length; i++ ) result[i] = upper[Math.floor(Math.random() * upper.length)]
       return result.join('')
     }
-
-  } else if ( this.charset != undefined && this.charset.length > 0 && typeof this.charset == 'string' ) {
-    
-    if ( this.length == undefined ) {
-      let result = []
-      
-      for ( let i = 0; i < this.charset.length; i++ ) result[i] = this.charset[Math.floor( Math.random() * this.charset.length )]
-      return result.join('')
-    
-    } else {
-      let result = []
-      
-      for ( let i = 0; i < this.length; i++ ) result[i] = this.charset[Math.floor( Math.random() * this.charset.length )]
-      return result.join('')
-    }
-
-  } else if ( typeof this.charset != 'string' ) {
-    return new Error('the charset value must be a string')
-
-  } else {
-    return new Error('this command cannot be executed')
   }
+
+  // default value
+  // the value comes from the origin variable
+  let result = []
+  for ( let i = 0; i < 10; i++ ) result[i] = origin[Math.floor(Math.random() * origin.length)]
+  return result.join('')
+
 }

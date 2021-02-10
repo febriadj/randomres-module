@@ -1,2 +1,5 @@
 const randomres = require('./index')
-console.log(randomres.Integer({}))
+console.log(randomres.str({
+  collect: 'uppercase',
+  length: 4
+}))

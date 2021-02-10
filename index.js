@@ -9,7 +9,8 @@
   - If the integer length is greater than 16, by default the length will be changed to 10
 
 */
-const String = require('./src/String').String
-const Integer = require('./src/Integer').Integer
+const str = require('./src/String').str
+const int = require('./src/Integer').int
+const compile = require('./src/Compile').compile
 
-module.exports = { String, Integer }
+module.exports = { str, int, compile }
