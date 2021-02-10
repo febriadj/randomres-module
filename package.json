@@ -1,7 +1,7 @@
 {
-  "name": "randomres-module",
+  "name": "randomres",
   "version": "1.0.0",
-  "description": "get random value with randomres",
+  "description": "Get random value with randomres",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

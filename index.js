@@ -4,7 +4,7 @@
     to get values from several data types randomly.
 
   - all source code comes from the './src' directory.
-  - developer -> febriadj
+  - developer -> febriadji
 
   - this module is released under the MIT license
 
