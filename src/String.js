@@ -9,6 +9,7 @@ exports.str = function( options ) {
         origin   = alphabet.concat(number)
 
   if ( typeof options == 'object' ) {
+    
     // key and value declarations
     const { collect, length } = options
 
@@ -22,7 +23,7 @@ exports.str = function( options ) {
     }
 
     // only results in uppercase
-    if ( collect == 'uppercase' ) {
+    if ( collect === 'uppercase' ) {
       if ( length == undefined ) {
         let result = []
         for ( let i = 0; i < 10; i++ ) result[i] = upper[Math.floor(Math.random() * upper.length)]
@@ -33,6 +34,35 @@ exports.str = function( options ) {
       for ( let i = 0; i < length; i++ ) result[i] = upper[Math.floor(Math.random() * upper.length)]
       return result.join('')
     }
+
+    // only results in lowercase
+    if ( collect === 'lowercase' ) {
+      if ( length == undefined ) {
+        let result = []
+        for ( let i = 0; i < 10; i++ ) result[i] = lower[Math.floor(Math.random() * lower.length)]
+        return result.join('')
+      }
+  
+      let result = []
+      for ( let i = 0; i < length; i++ ) result[i] = lower[Math.floor(Math.random() * lower.length)]
+      return result.join('')
+    }
+
+    if ( collect === 'alphabet' ) {
+      if ( length == undefined ) {
+        let result = []
+        for ( let i = 0; i < 10; i++ ) result[i] = alphabet[Math.floor(Math.random() * alphabet.length)]
+        return result.join('')
+      }
+  
+      let result = []
+      for ( let i = 0; i < length; i++ ) result[i] = alphabet[Math.floor(Math.random() * alphabet.length)]
+      return result.join('')
+    }
+
+    // if the collect value is not available
+    return new Error("'" + collect + "'" + ' this value is not available')
+  
   }
 
   // default value

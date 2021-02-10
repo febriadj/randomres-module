@@ -3,52 +3,49 @@
 ![build](https://img.shields.io/badge/randomres-d62828?style=for-the-badge&logo=npm&logoColor=white)
 <br>
 
-RandomRes is a simple module to make it easy for you to get random values, you can install this module via npm
+RandomRes is a simple module to make it easy for you to get values from several data types randomly
 
 # Install
+``` npm install -g randomres ```<br>
+
 ``` npm install --save randomres ```
 
 # How to Use
 ``` javascript
-// STRING VALUE
+// string value
 const randomres = require('randomres')
 
 // default value
-randomres.String({}) //-> pt6K5g4x0G
+randomres.str() //-> pt6K5g4x0G
 
-randomres.String({
-  length: 15,
-  charset: 'alphabet'
+randomres.str({
+  collect: 'alphabet',
+  length: 15
 })
 
-const value = 'yourvalue'
-randomres.String({
-  charset: value
+randomres.str({
+  collect: 'uppercase',
+  length: 22
 })
 
 ```
 
 ``` javascript
-// INTEGER VALUE
+// scrambles own value
 const randomres = require('randomres')
 
-// default value
-randomres.Integer({}) //-> 3584312377
+const arr = ['banana', 'apple', 'avocado']
+randomres.compile({
+  set: arr
+})
 
-randomres.Integer({
-  length: 12,
-  remove: 4
+const string = 'lorem ipsum set dolor amet'
+randomres.compile({
+  set: string,
+  length: 100 
 })
 
 ```
-
-# Procedure
-
-### String Value :
-- By default, the length of the <b>String</b> value is 10
-- There is no maximum limit for the length of <b>String</b> values
-- ``` charset: 'alphabet' ``` This is the key to getting value only from A-Z & a-z
-- In the charset, you can enter your own value ( must be of a string data type )
 
 # License
 This module is released under the [MIT License](https://github.com/febriadj/randomres-module/blob/master/LICENSE)

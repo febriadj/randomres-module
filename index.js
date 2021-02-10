@@ -10,7 +10,6 @@
 
 */
 const str = require('./src/String').str
-const int = require('./src/Integer').int
 const compile = require('./src/Compile').compile
 
-module.exports = { str, int, compile }
+module.exports = { str, compile }
