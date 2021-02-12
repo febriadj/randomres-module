@@ -1,17 +1,16 @@
-# RandomRes
+# Randomres
 ![nodejs](https://img.shields.io/badge/nodejs-00a896?style=for-the-badge&logo=node.js&logoColor=white)
 ![build](https://img.shields.io/badge/randomres-d62828?style=for-the-badge&logo=npm&logoColor=white)
 <br>
 
-RandomRes is a simple module to make it easy for you to get values from several data types randomly
+Randomres is a simple module to make it easy for you to get values from several data types randomly
 
 # Install
 ```
-npm install -g randomres 
+npm install randomres 
 ```
-
 ``` 
-npm install --save randomres 
+yarn add randomres
 ```
 
 # How to Use
@@ -70,7 +69,7 @@ randomres.compile({
 The ```start``` and ```end``` keys of the date method have default values. The default ```start``` value is the current date, for the default ```end``` value is one year ahead.
 
 ### Compile Method
-In the ```Compile``` method, the input data types are strings and arrays.
+In the ```compile``` method, the input data types are strings and arrays.
 
 . . .
 
