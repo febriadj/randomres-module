@@ -65,13 +65,14 @@ randomres.compile({
 
 ```
 
-- -
+- - - 
 ### Date Method
 The ```start``` and ```end``` keys of the date method have default values. The default ```start``` value is the current date, for the default ```end``` value is one year ahead.
 
 ### Compile Method
 In the ```Compile``` method, the input data types are strings and arrays.
-- -
+
+. . .
 
 # License
 This module is released under the [MIT License](https://github.com/febriadj/randomres-module/blob/master/LICENSE)
